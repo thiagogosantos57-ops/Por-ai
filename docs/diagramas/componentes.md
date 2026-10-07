@@ -1,4 +1,4 @@
-```markdown
+
 ```mermaid
 flowchart TD
     subgraph FRONTEND ["Frontend (Interface)"]
