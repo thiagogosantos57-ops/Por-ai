@@ -1,61 +1,54 @@
+```mermaid
 classDiagram
     class Usuario {
         +int id
         +string nome
         +string email
-        +string senha_hash
-        +datetime data_cadastro
-        +autenticar()
+        +string senha
         +cadastrar()
+        +login()
     }
 
     class Destino {
         +int id
-        +string nome
+        +string cidade
         +string pais
         +string continente
         +string descricao
-        +string clima_predominante
-        +obterDetalhes()
     }
 
-    class Sazonalidade {
+    class SazonalidadeDestino {
         +int id
-        +int destino_id
+        +int destinoId
         +int mes
-        +float temp_media
-        +int precipitacao_mm
         +string classificacao
-        +string resumo_clima
+        +string clima
+    }
+
+    class Planejamento {
+        +int id
+        +int usuarioId
+        +string titulo
+        +int ano
     }
 
     class ItemPlanejamento {
         +int id
-        +int usuario_id
-        +int destino_id
-        +date data_inicio
-        +date data_fim
-        +string status
-        +int progresso_checklist
-        +salvarRoadmap()
+        +int planejamentoId
+        +int destinoId
+        +int mes
+        +int dias
     }
 
     class Checklist {
         +int id
-        +int viagem_id
-        +string categoria
-        +string item
+        +int planejamentoId
+        +string tarefa
         +boolean concluido
-        +alternarStatus()
     }
 
-    class ServicoClimaAPI {
-        +string apiKey
-        +sincronizarDados()
-    }
-
-    Usuario "1" -- "0..*" ItemPlanejamento : possui
-    Destino "1" -- "12" Sazonalidade : possui
-    Destino "1" -- "0..*" ItemPlanejamento : e_alvo_de
-    ItemPlanejamento "1" -- "0..*" Checklist : possui
-    ServicoClimaAPI ..> Sazonalidade : atualiza
+    Usuario "1" -- "N" Planejamento : possui
+    Planejamento "1" -- "N" ItemPlanejamento : contem
+    Destino "1" -- "N" ItemPlanejamento : refere
+    Destino "1" -- "12" SazonalidadeDestino : possui
+    Planejamento "1" -- "N" Checklist : possui
