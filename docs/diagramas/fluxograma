@@ -1,0 +1,12 @@
+```mermaid
+flowchart TD
+    A([Início: Acessar Sistema]) --> B[Selecionar Mês ou Datas do Ano]
+    B --> C[Filtrar Preferências de Clima e Viagem]
+    C --> D[Consultar Banco de Sazonalidade]
+    D --> E{Existem Recomendações?}
+    E -- Não --> C
+    E -- Sim --> F[Exibir Lista de Destinos Recomendados]
+    F --> G[Selecionar Destino Desejado]
+    G --> H[Adicionar ao Calendário Anual]
+    H --> I[Criar Checklist de Preparativos]
+    I --> J([Fim: Viagem Planejada])
