@@ -1,4 +1,4 @@
-```markdown
+
 ```mermaid
 stateDiagram-v2
     [*] --> Inicio
