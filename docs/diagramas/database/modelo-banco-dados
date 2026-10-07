@@ -1,0 +1,59 @@
+```mermaid
+erDiagram
+    USUARIOS ||--o{ PLANEJAMENTOS : cria
+    PLANEJAMENTOS ||--o{ ITENS_PLANEJAMENTO : contem
+    DESTINOS ||--o{ ITENS_PLANEJAMENTO : refere
+    DESTINOS ||--|{ SAZONALIDADE_DESTINO : possui
+    PLANEJAMENTOS ||--o{ CHECKLISTS : possui
+
+    USUARIOS {
+        int id PK
+        string nome
+        string email
+        string senha_hash
+        datetime data_cadastro
+    }
+
+    DESTINOS {
+        int id PK
+        string nome_cidade
+        string pais
+        string continente
+        string descricao
+        string imagem_url
+    }
+
+    SAZONALIDADE_DESTINO {
+        int id PK
+        int destino_id FK
+        int mes
+        string nome_mes
+        string classificacao
+        string tipo_temporada
+        string clima_resumo
+    }
+
+    PLANEJAMENTOS {
+        int id PK
+        int usuario_id FK
+        string titulo
+        int ano_pretendido
+        string status
+        datetime data_criacao
+    }
+
+    ITENS_PLANEJAMENTO {
+        int id PK
+        int planejamento_id FK
+        int destino_id FK
+        int mes_escolhido
+        int dias_duracao
+        string observacoes
+    }
+
+    CHECKLISTS {
+        int id PK
+        int planejamento_id FK
+        string descricao_tarefa
+        boolean concluido
+    }
