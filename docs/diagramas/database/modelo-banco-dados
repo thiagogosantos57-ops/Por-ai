@@ -1,17 +1,17 @@
 ```mermaid
 erDiagram
-    USUARIOS ||--o{ PLANEJAMENTOS : cria
-    PLANEJAMENTOS ||--o{ ITENS_PLANEJAMENTO : contem
-    DESTINOS ||--o{ ITENS_PLANEJAMENTO : refere
-    DESTINOS ||--|{ SAZONALIDADE_DESTINO : possui
-    PLANEJAMENTOS ||--o{ CHECKLISTS : possui
+    USUARIOS ||--o{ PLANEJAMENTOS : "cria"
+    PLANEJAMENTOS ||--o{ ITENS_PLANEJAMENTO : "contem"
+    DESTINOS ||--o{ ITENS_PLANEJAMENTO : "pertence"
+    DESTINOS ||--|{ SAZONALIDADE_DESTINO : "possui"
+    PLANEJAMENTOS ||--o{ CHECKLISTS : "possui"
 
     USUARIOS {
         int id PK
         string nome
         string email
         string senha_hash
-        datetime data_cadastro
+        string data_cadastro
     }
 
     DESTINOS {
@@ -39,7 +39,7 @@ erDiagram
         string titulo
         int ano_pretendido
         string status
-        datetime data_criacao
+        string data_criacao
     }
 
     ITENS_PLANEJAMENTO {
@@ -55,5 +55,5 @@ erDiagram
         int id PK
         int planejamento_id FK
         string descricao_tarefa
-        boolean concluido
+        string concluido
     }
