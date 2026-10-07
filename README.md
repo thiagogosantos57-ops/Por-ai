@@ -25,7 +25,7 @@ O funcionamento do sistema é baseado em quatro etapas principais:
 O protótipo da aplicação web foi desenvolvido no Figma e apresenta a proposta inicial da interface, fluxo de navegação e dashboards do sistema.
  Acessar no Figma (insira o link aqui)
  
-##Diagramas e UML
+## Diagramas e UML
 
 A estrutura da aplicação conta com as seguintes documentações de modelagem:
  Diagrama de Casos de Uso
@@ -34,7 +34,7 @@ A estrutura da aplicação conta com as seguintes documentações de modelagem:
  Fluxograma do Planejamento de Viagens
  Diagrama de Componentes
  
-##Infraestrutura Técnica
+## infraestrutura Técnica
 
 ### Front-end
 
