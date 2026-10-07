@@ -1,11 +1,11 @@
+```mermaid
 %%{init: {
   "theme": "base",
   "flowchart": {
     "htmlLabels": true,
-    "padding": 30,
-    "wrappingWidth": 300,
-    "nodeSpacing": 35,
-    "rankSpacing": 50
+    "padding": 20,
+    "nodeSpacing": 30,
+    "rankSpacing": 60
   },
   "themeVariables": {
     "background": "#ffffff",
@@ -20,11 +20,8 @@
 
 flowchart LR
 
-subgraph DIAGRAMA[" "]
-direction LR
-
-    USUARIO["◯<br/>╱│╲<br/>╱ ╲<br/>Usuário"]
-    ADMIN["◯<br/>╱│╲<br/>╱ ╲<br/>Administrador"]
+    USUARIO["👤<br/>Usuário"]
+    ADMIN["🛠️<br/>Administrador"]
 
     subgraph SISTEMA["TravelCalendar"]
 
@@ -56,15 +53,12 @@ direction LR
     CONSULTAR -.-> DATAS
     FIXAR -.-> GUIA
 
-end
-
-classDef ator fill:transparent,stroke:transparent,color:#000000,font-size:16px;
-classDef caso fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1.5px,font-size:15px;
+classDef ator fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1.5px,font-size:15px;
+classDef caso fill:#ffffff,stroke:#000000,color:#000000,stroke-width:1.5px,font-size:14px;
 
 class USUARIO,ADMIN ator;
 class AUTENTICAR,DATAS,CONSULTAR,FILTRAR,GUIA,FIXAR,CHECKLIST,GERENCIARDESTINOS,GERENCIARUSUARIOS,MONITORAR caso;
 
-style DIAGRAMA fill:#ffffff,stroke:#ffffff,color:#000000
 style SISTEMA fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
 
 linkStyle default stroke:#000000,stroke-width:1.5px;
