@@ -51,7 +51,7 @@ A estrutura da aplicação conta com as seguintes documentações de modelagem:
 ### Banco de dados
 
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=plastic&logo=mysql&logoColor=white)
-##Sistema Web
+## Sistema Web
 
 A aplicação permitirá acompanhar e gerenciar todas as etapas da organização de viagens, incluindo:
  Calendário Interativo: Visualização anual com destaque para os melhores meses de cada destino;
@@ -64,13 +64,21 @@ A aplicação permitirá acompanhar e gerenciar todas as etapas da organização
 
 A documentação técnica detalhada do projeto está disponível na pasta ⁠/docs⁠.
 Atualmente, o projeto contempla:
- Protótipo da aplicação web (Figma)
- Diagrama de Casos de Uso
- Modelagem do Banco de Dados
- Documentação de requisitos do sistema
+* Protótipo da aplicação web (Figma)
+* Diagrama de Casos de Uso
+* Diagrama de Classes
+* Diagrama de Sequências
+* Diagrama de Estados
+* Diagrama dos componetes
+* Fluxograma do sistema
+
+
+* Modelagem do Banco de Dados
+* Documentação de requisitos do sistema
 Novos diagramas e especificações serão adicionados ao longo do desenvolvimento
 
 ## Autor
+Thiago Gotardo dos Santos
 
 ## status
 
