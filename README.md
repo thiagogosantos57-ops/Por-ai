@@ -23,8 +23,9 @@ O funcionamento do sistema é baseado em quatro etapas principais:
 ## Protótipo
 
 O protótipo da aplicação web foi desenvolvido no Figma e apresenta a proposta inicial da interface, fluxo de navegação e dashboards do sistema.
- Acessar no Figma (insira o link aqui)
- 
+Acessar no Figma   
+[![Figma](https://img.shields.io/badge/Acessar%20Protótipo-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/make/HaxyQWGUBtA7qFaiOH2uqS/Design-System-TravelCalendar?p=f&t=2xUvxgNjESA1ayb2-0)
+
 ## Diagramas e UML
 
 A estrutura da aplicação conta com as seguintes documentações de modelagem:
