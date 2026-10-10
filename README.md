@@ -52,6 +52,13 @@ A estrutura da aplicação conta com as seguintes documentações de modelagem:
 ### Banco de dados
 
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=plastic&logo=mysql&logoColor=white)
+
+### Desenvolvimento e prototipação
+
+![Git](https://img.shields.io/badge/Git-F05032?style=plastic&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=plastic&logo=github&logoColor=white)
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=plastic&logo=figma&logoColor=white)
+
 ## Sistema Web
 
 A aplicação permitirá acompanhar e gerenciar todas as etapas da organização de viagens, incluindo:
