@@ -2,7 +2,7 @@
 
 Plataforma inteligente para organização, planejamento e mapeamento do calendário ideal de viagens.
 
-**Domínio:** ⁠meudestinocerto.com.br⁠ (em desenvolvimento)
+**Domínio:** ⁠travelcalendar.com.br⁠ (em desenvolvimento)
 
 O TravelCalendar é um projeto voltado para o planejamento estratégico de viagens. A proposta central da aplicação é consolidar dados de sazonalidade, clima e atrativos locais para ajudar o usuário a organizar seus roteiros e descobrir o melhor mês para visitar cada destino, sem o foco comercial de venda de passagens ou pacotes.
 Sobre o projeto
