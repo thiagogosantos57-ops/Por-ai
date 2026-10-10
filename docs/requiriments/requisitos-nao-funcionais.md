@@ -1,20 +1,49 @@
-# Requisitos Não-Funcionais (RNF) — TravelCalendar
+# Documento de Requisitos Não-Funcionais (RNF) — TravelCalendar
 
-O documento especifica os critérios de qualidade, segurança e arquitetura técnica do TravelCalendar.
+Este documento estabelece as restrições técnicas, os atributos de qualidade, os padrões de segurança e as diretrizes de arquitetura aplicados ao projeto **TravelCalendar**.
 
-## Fase 1 - Desempenho e Interface
+---
 
-* Interface web responsiva desenvolvida com Tailwind CSS e HTML5;
-* Compatibilidade com os principais navegadores (Chrome, Firefox, Edge, Safari);
-* Tempo de resposta da API de recomendação inferior a 2 segundos.
+## 1. Desempenho e Eficiência
 
-## Fase 2 - Segurança e Banco de Dados
+* **RNF01 - Tempo de Resposta da API:**
+  * As requisições de busca de destinos por sazonalidade e filtros devem responder em menos de **1.5 segundos** sob condições normais de uso.
 
-* Criptografia de senhas no banco de dados com hash seguro (Bcrypt);
-* Armazenamento relacional e integridade referencial no MySQL;
-* Proteção contra acessos não autorizados nas rotas da API.
+* **RNF02 - Otimização de Imagens e Assets:**
+  * As imagens dos destinos turísticos devem ser carregadas de forma otimizada (formatos leves como WebP/JPEG comprimido) para garantir carregamento rápido no frontend.
 
-## Fase 3 - Arquitetura e Padrões Acadêmicos
+---
 
-* Arquitetura fullstack desacoplada (Frontend em HTML/JS, Backend em FastAPI e Banco MySQL);
-* Padrão de repositório e documentação estruturada segundo as diretrizes da FATEC Araraquara.
+## 2. Usabilidade e Responsividade
+
+* **RNF03 - Interface Responsiva (Mobile e Desktop):**
+  * O frontend construído com Tailwind CSS deve adaptar seu layout dinamicamente para diferentes resoluções de tela (smartphones, tablets e computadores de mesa).
+
+* **RNF04 - Acessibilidade e Feedback Visual:**
+  * A interface deve fornecer feedback claro ao usuário em ações de busca, erros de validação (ex: e-mail inválido) e estados de carregamento (*spinners* ou *placeholders* durante a requisição).
+
+---
+
+## 3. Segurança e Proteção de Dados
+
+* **RNF05 - Criptografia de Senhas:**
+  * As senhas dos usuários nunca devem ser salvas em texto puro no banco de dados. Elas devem obrigatoriamente passar por um processo de hash seguro utilizando a biblioteca `Bcrypt` antes do armazenamento.
+
+* **RNF06 - Proteção de Rotas e Validação JWT:**
+  * As rotas privadas da API (como salvar uma viagem ou alterar um checklist) devem validar o token JWT enviado nos cabeçalhos (`Authorization: Bearer <token>`).
+
+---
+
+## 4. Arquitetura e Engenharia de Software
+
+* **RNF07 - Arquitetura Fullstack Desacoplada:**
+  * O projeto deve manter uma separação rígida entre as camadas:
+    * **Frontend:** Interface estática (HTML5, JavaScript ES6, Tailwind CSS).
+    * **Backend:** API RESTful desenvolvida em Python (`FastAPI`).
+    * **Persistência:** Banco de dados relacional (`MySQL`).
+
+* **RNF08 - Integridade Referencial no Banco de Dados:**
+  * O banco de dados MySQL deve manter restrições de Chaves Estrangeiras (`FOREIGN KEY`) com ações em cascata (`ON DELETE CASCADE`) apropriadas para garantir a integridade dos dados de planejamento e checklists.
+
+* **RNF09 - Padronização do Repositório (GitHub):**
+  * A estrutura de documentação deve seguir a organização hierárquica estipulada para a avaliação técnica na FATEC Araraquara (pastas `database`, `diagrams`, `requirements` e `roadmap`).
