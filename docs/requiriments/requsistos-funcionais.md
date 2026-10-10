@@ -1,4 +1,4 @@
-#~Requisitos Funcionais (RF) — TravelCalendar
+## Requisitos Funcionais (RF) — TravelCalendar
 
 Este documento detalha as funcionalidades que o sistema **TravelCalendar** oferece para permitir a busca por sazonalidade, o planejamento de viagens e a gestão do itinerário do usuário.
 
